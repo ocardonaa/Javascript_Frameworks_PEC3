@@ -1,0 +1,4 @@
+Una de las ventajas más importantes que ofrece typescript frente a javascript, a parte de ser un superset por lo que todo código existente de javascript puede funcionar en typescript pero con algunos features(como mejores tools, más sintaxis, mejor debugging) y ventajas añadidas es, el uso de tipos.
+El tener el strict i static typing permite el poder definir o esperar valores en lugares concretos y evitar errores como inputs incorrectos o tipos de datos que no corresponden por la forma más laxa de declarar de javascript.
+En el ejemplo de la clase Dog daria error en ts porque antes de encontrarse con el problema referente a kind lo evitaria. En cambio, js es menos exigente con este inconveniente.
+Para corregirlo bastaria con en el momento que salte porque kind es true y no un string, convertirlo a string.

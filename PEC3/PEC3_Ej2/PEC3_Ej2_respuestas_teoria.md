@@ -1,6 +1,8 @@
 ## Ej2 code1.ts
 El propio IDE ya indica que, a, b y d son números y c es un objeto
+
 ![alt text](image.png)
+
 Si hacemos esa modificación, podremos ver que ahora a pasa a ser un string, lo cual impide que se haga la operación de d correctamente.
 Esto es porque no son del mismo tipo, una variable es un string y la otra un numero.
 En javascript esta operación se puede hacer porque la resolveria con una concatenación de strings pese a que en raras ocasiones se busca eso.

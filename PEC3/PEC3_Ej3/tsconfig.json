@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2015", // que versión de javascript estamos usando
+    "module": "commonjs", // indica como se importan o exportan las librerias, en este caso commonjs se usa mucho para proyectos web
+    "outDir": "./dist",  // aqui se guardan los archivos compilados
+    "rootDir": "./src", // indica el directorio donde estaran los source files, en nuestro caso los archivos de typescript
+    "strict": true, // controla como de estricto quiere que sea el compilador. En este caso va a ser muy riguroso con lo que se programa
+    "incremental": true, // este flag indica que typescript guarda la información de la anterior compilación en disco para asi ahorrar tiempo a la hora de compilar nuevamente
+    "tsBuildInfoFile": "./buildcache", // aqui se indica donde se guarda la información que incremental almacena
+  }
+}

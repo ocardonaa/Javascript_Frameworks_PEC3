@@ -1,8 +1,4 @@
 "use strict";
-/*
-Sustituye por las instrucciones adeacuadas que cumplan las operaciones
-y salidas indicadas en los comentarios.
-*/
 function printArray(array) {
     array.forEach(elem => {
         console.log(elem);

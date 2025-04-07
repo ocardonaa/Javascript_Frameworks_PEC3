@@ -1,7 +1,6 @@
 abstract class Animal {
     static population: number = 0;
-    constructor() {
-    }
+    constructor() { }
     public abstract sound(): void;
 }
 
@@ -18,7 +17,7 @@ class Dog extends Animal {
     }
 
     public sound(): void {
-        console.log('WOW')
+        console.log('WOW');
     }
 }
 
@@ -35,7 +34,7 @@ class Cat extends Animal {
     }
 
     public sound(): void {
-        console.log('MEOW')
+        console.log('MEOW');
     }
 }
 
@@ -48,10 +47,10 @@ Animal.population = animals.length;
 
 for (let animal of animals) {
     animal.sound();
-    if(animal instanceof Cat) {
+    if (animal instanceof Cat) {
         animal.iamacat();
     }
-    if(animal instanceof Dog) {
+    if (animal instanceof Dog) {
         animal.iamadog();
     }
 }

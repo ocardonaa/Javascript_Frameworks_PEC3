@@ -1,7 +1,6 @@
 "use strict";
 class Animal {
-    constructor() {
-    }
+    constructor() { }
 }
 Animal.population = 0;
 class Dog extends Animal {

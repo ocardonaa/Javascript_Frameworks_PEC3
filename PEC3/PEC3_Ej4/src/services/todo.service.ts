@@ -5,33 +5,32 @@
  */
 
 import { Todo } from "../models/todo.model";
+import { v4 as uuidv4 } from 'uuid';
 
-class TodoService {
-  private todos: Todo[] = [];
-  private onTodoListChanged: (todos: Todo[]) => void | null;
+export class TodoService {
+  todos: Todo[] = [];
+  onTodoListChanged: (todos: Todo[]) => void;
 
   constructor() {
-    const localStorageTodos = localStorage.getItem("todos");
-    if (localStorageTodos !== null) {
-      this.todos = (JSON.parse(localStorageTodos) || []).map(
-        todo => new Todo(todo)
-      );
-    }
-
+    this.onTodoListChanged = () => {};
   }
 
-  bindTodoListChanged(callback) {
+  bindTodoListChanged(callback: (todos: Todo[]) => void): void {
     this.onTodoListChanged = callback;
   }
 
-  _commit(todos: Todo[]) {
+  _commit(todos: Todo[]): void {
     this.onTodoListChanged(todos);
     localStorage.setItem("todos", JSON.stringify(todos));
   }
 
   addTodo(text: string) {
-    this.todos.push(new Todo(text));
-
+    const newTodo: Todo = {
+      id: uuidv4(),
+      text: text,
+      completed: false
+    }
+    this.todos.push(newTodo);
     this._commit(this.todos);
   }
 
@@ -46,20 +45,17 @@ class TodoService {
     this._commit(this.todos);
   }
 
-  deleteTodo(_id) {
+  deleteTodo(_id: string) {
     this.todos = this.todos.filter(({ id }) => id !== _id);
-
     this._commit(this.todos);
   }
 
-  toggleTodo(_id) {
+  toggleTodo(_id: string) {
     this.todos = this.todos.map(todo => {
       if (todo.id === _id) {
         return { ...todo, completed: !todo.completed };
       }
       else return todo
     });
-
-    this._commit(this.todos);
   }
 }

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        /* Basic Options */
+        "target": "ES6",
+        "module": "ESNext",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true,
+        "incremental": true,
+        "tsBuildInfoFile": "./buildcache",
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

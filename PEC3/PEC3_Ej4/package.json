@@ -1,5 +1,11 @@
 {
   "devDependencies": {
-    "@types/uuid": "^10.0.0"
+    "@types/uuid": "^10.0.0",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.99.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
   }
 }

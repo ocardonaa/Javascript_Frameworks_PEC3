@@ -14,4 +14,4 @@ tras esto ejecuté para lanzar la aplicación con
 
 `npx webpack --config webpack.config.js`
 
-Y en localhost pude ver mi proyecto, aunque también como extensión uso Live Server de VSCode
+Y para ver el resultado usé la extensión de VSCode de Live Server, lanzada sobre el fichero index.html

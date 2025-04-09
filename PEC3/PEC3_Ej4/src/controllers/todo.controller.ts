@@ -15,10 +15,11 @@ export class TodoController {
 
   service: TodoService;
   view: TodoView;
+
   constructor(service: TodoService, view: TodoView) {
     this.service = service;
     this.view = view;
-
+    
     // Explicit this binding
     this.service.bindTodoListChanged(this.onTodoListChanged);
     this.view.bindAddTodo(this.handleAddTodo);

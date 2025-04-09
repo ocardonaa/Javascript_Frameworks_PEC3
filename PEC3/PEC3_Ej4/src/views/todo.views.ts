@@ -29,7 +29,6 @@ export class TodoView {
     this.title.textContent = "Todos";
     this.todoList = this.createElement("ul", "todo-list");
     this.app.append(this.title, this.form, this.todoList);
-
     this._temporaryTodoText = "";
     this._initLocalListeners();
   }
@@ -44,15 +43,12 @@ export class TodoView {
 
   createElement(tag: any, className?: string) {
     const element = document.createElement(tag);
-
     if (className) element.classList.add(className);
-
     return element;
   }
 
   getElement(selector: any) {
     const element = document.querySelector(selector);
-
     return element;
   }
 
@@ -114,7 +110,6 @@ export class TodoView {
   bindAddTodo(handler: { (todoText: string): void; (arg0: string): void; }) {
     this.form.addEventListener("submit", event => {
       event.preventDefault();
-
       if (this._todoText) {
         handler(this._todoText);
         this._resetInput();

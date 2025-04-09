@@ -14,4 +14,6 @@ tras esto ejecuté para lanzar la aplicación con
 
 `npx webpack --config webpack.config.js`
 
-Y para ver el resultado usé la extensión de VSCode de Live Server, lanzada sobre el fichero index.html
+Y para ver el resultado usé la extensión de VSCode de Live Server, lanzada sobre el fichero index.html, aqui adjunto una captura de este
+
+![alt text](image.png)
